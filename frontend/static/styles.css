@@ -28,6 +28,20 @@ input[type="password"] {
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
 }
 
+/* for select boxes */
+select {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 10px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+}
+
+
 button[type="submit"] {
     background-color: #4CAF50;
     color: white;
@@ -45,9 +59,53 @@ button[type="submit"]:hover {
     background-color: #45a049;
 }
 
+button[type="submit"]:active {
+    background-color: #3e9142;
+}
+
+.success-message {
+    background: white;
+    padding: 15px;
+    width: 300px;
+    height: 130px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+button[type="button"]{
+    background-color: rgb(86, 207, 211);
+    left: 50%;
+    transform: translateX(-50%);
+    color: black;
+    border: none;
+    padding: 10px 10px;
+    margin: 10px 0;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 50%;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    position: absolute;
+    bottom: 0;
+}
+
+button[type="button"]:hover {
+    background-color: rgb(76, 197, 201);
+}
+
+button[type="button"]:active {
+    background-color: rgb(66, 187, 191);
+    background-color: rgb(66, 187, 191);
+}
+
 .error-message {
     color: rgb(237, 67, 55);
     font-size: 10px;
+    line-height: 0;
 }
 
 #notice {

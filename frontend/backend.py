@@ -7,17 +7,26 @@ app = Flask(__name__)
 def index():
     return render_template('login.html')
 
+@app.route('/success')
+def success():
+    return render_template('success.html')
+
 @app.route('/login', methods=['POST'])
 def login():
-    username = request.form['username']
-    pNumber = request.form['phone_number']
-    password = request.form['password']
+    # information: name, gender, occupational, hobbies
 
-    print(f"username: {username}")
-    print(f"phone number: {pNumber}")
-    print(f"password: {password}")
+    name = request.form['name']
+    gender = request.form['gender']
+    occupation = request.form['occupation']
+    hobbies = request.form['hobbies']
 
-    return redirect(url_for('index'))
+    print(f"Name: \t\t{name}")
+    print(f"Gender: \t{gender}")
+    print(f"Occupation: \t{occupation}")
+    print(f"Hobbies: \t{hobbies}")
+
+    # return redirect(url_for('index'))
+    return redirect(url_for('success'))
 
 
 

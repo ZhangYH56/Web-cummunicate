@@ -47,12 +47,6 @@ document.getElementById('loginForm').addEventListener(
             return;
         }
 
-        const username = document.getElementById('username').value
-        const password = document.getElementById('password').value
-        
-        console.log('bro\'s username: ' + username);
-        console.log('bro\'s password: ' + password);
-
         const formData = new FormData(this) //get form
 
         try{ 
@@ -62,7 +56,7 @@ document.getElementById('loginForm').addEventListener(
             });
 
             if (response.ok){
-                window.location.href = '/'
+                window.location.href = '/success'
             } else{
                 alert('Login failded!');
             }
