@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="../static/styles.css">
+</head>
+<body>
+    <div class="login-container">
+        <h2 style="text-align: center;">Register</h2>
+        <form id="loginForm" action="{{ url_for('login') }}" method="POST">
+            <div class="form-group">
+                <label for="username">Username: *</label>
+                <input type="text" id="username" name="username" data-required="true">
+                <div class="error-message" id="username-error"></div>
+            </div>
+            <div class="form-group">
+                <label for="phone_number">Phone Number:</label>
+                <input type="text" id="phone_number" name="phone_number" data-required="false">
+                <div class="error-message" id="phone_number-error"></div>
+            </div>
+            <div class="form-group">
+                <label for="password">Password: *</label>
+                <input type="password" id="password" name="password" data-required="true">
+                <div class="error-message" id="password-error"></div>
+            </div>
+            <div id="error-message"></div>
+            <button type="submit">Login</button>
+        </form>
+        <p id="notice">* Required inputs</p>
+    </div>
+    <script src="../static/script.js"></script>
+</body>
+</html>
