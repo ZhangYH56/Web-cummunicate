@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="../static/styles.css">
+</head>
+<body>
+    <div class="login-container">
+        <h2 style="text-align: center;">Information</h2>
+        <form id="loginForm" action="{{ url_for('login') }}" method="POST">
+
+            <div class="form-group">
+                <label for="name">Name: *</label>
+                <input type="text" id="name" name="name" data-required="true">
+                <div class="error-message" id="name-error"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="gender">Gender: *</label>
+                <select id="gender" name="gender" data-required="true">
+                    <option value="">Select Gender</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+                <div class="error-message" id="gender-error"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="occupation">Occupation: *</label>
+                <input type="text" id="occupation" name="occupation" data-required="true">
+                <div class="error-message" id="occupation-error"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="hobbies">Hobbies: *</label>
+                <input type="text" id="hobbies" name="hobbies" data-required="true">
+                <div class="error-message" id="hobbies-error"></div>
+            </div>
+            <div id="error-message"></div>
+            <button type="submit">Login</button>
+        </form>
+        <p id="notice">* Required inputs</p>
+    </div>
+    <script src="../static/script_login.js"></script>
+</body>
+</html>
